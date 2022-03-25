@@ -3,6 +3,7 @@ package com.weiyung.zoo
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.ui.AppBarConfiguration
 import com.weiyung.zoo.databinding.ActivityMainBinding
 
@@ -13,5 +14,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        binding.lifecycleOwner = this
+        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        binding.viewModel = viewModel
     }
 }
