@@ -1,4 +1,6 @@
 package com.weiyung.zoo
 
-class SpeciesFragment {
+import androidx.fragment.app.Fragment
+
+class SpeciesFragment : Fragment() {
 }

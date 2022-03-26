@@ -36,7 +36,7 @@ class HomeAdapter (private val onClickListener: OnClickListener):
         }
 
         override fun areContentsTheSame(oldItem: Content, newItem: Content): Boolean {
-            return oldItem.id == newItem.id
+            return oldItem.E_no == newItem.E_no
         }
     }
     class OnClickListener(val clickListener: (content: Content) -> Unit){

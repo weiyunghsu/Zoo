@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.RecyclerView
 import com.weiyung.zoo.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -17,6 +18,12 @@ class HomeFragment : Fragment() {
     ): View? {
         viewModel =
             ViewModelProvider(this).get(MainViewModel::class.java)
+        binding?.lifecycleOwner = this
+        val recyclerView = binding?.root?.findViewById<RecyclerView>(R.id.home_recyclerview)
+
+        val adapter = HomeAdapter(HomeAdapter.OnClickListener{})
+
+        recyclerView?.adapter = adapter
         return binding?.root
     }
 }

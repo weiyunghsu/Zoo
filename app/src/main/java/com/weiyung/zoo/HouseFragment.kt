@@ -1,4 +1,6 @@
 package com.weiyung.zoo
 
-class HouseFragment {
+import androidx.fragment.app.Fragment
+
+class HouseFragment : Fragment() {
 }
