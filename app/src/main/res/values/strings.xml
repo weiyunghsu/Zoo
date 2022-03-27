@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Zoo</string>
+    <string name="app_name">台北市立動物園</string>
     <string name="home_fragment_label">Taipei Zoo</string>
     <string name="house_fragment_label">insect house</string>
     <string name="species_fragment_label">bird</string>
