@@ -7,6 +7,12 @@
         <variable
             name="viewModel"
             type="com.weiyung.zoo.MainViewModel" />
+        <variable
+            name="animal"
+            type="com.weiyung.zoo.Animal" />
+        <variable
+            name="content"
+            type="com.weiyung.zoo.Content" />
     </data>
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -21,8 +27,10 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="SpeakableTextPresentCheck"
         tools:listitem="@layout/content_home" />
 </androidx.constraintlayout.widget.ConstraintLayout>
