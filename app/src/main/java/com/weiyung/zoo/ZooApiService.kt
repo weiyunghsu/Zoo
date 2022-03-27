@@ -22,10 +22,7 @@ private val moshi = Moshi.Builder()
 private val client = OkHttpClient.Builder()
     .addInterceptor(
         HttpLoggingInterceptor().apply {
-            level = when (BuildConfig.LOGGER_VISIABLE) {
-                true -> HttpLoggingInterceptor.Level.BODY
-                false -> HttpLoggingInterceptor.Level.NONE
-            }
+            level = HttpLoggingInterceptor.Level.BODY
         }
     )
     .build()
@@ -38,6 +35,6 @@ interface ZooApiService {
     suspend fun getSpecies(): SpeciesResult
 }
 
-object ZooApi {
-    val retrofitService: ZooApiService by lazy { retrofit.create(ZooApiService::class.java) }
-}
+//object ZooApi {
+//    val retrofitService: ZooApiService by lazy { retrofit.create(ZooApiService::class.java) }
+//}

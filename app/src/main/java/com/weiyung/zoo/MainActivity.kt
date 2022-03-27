@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         viewModel.currentFragmentType.observe(
             this,
             Observer {
-                Log.i("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-                Log.i("[${viewModel.currentFragmentType.value}]")
-                Log.i("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+//                Log.i("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+//                Log.i("[${viewModel.currentFragmentType.value}]")
+//                Log.i("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             }
         )
     }
