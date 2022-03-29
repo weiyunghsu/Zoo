@@ -22,7 +22,7 @@
             tools:context=".MainActivity">
 
             <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
+                android:id="@+id/toolbarIcon"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@color/white"
@@ -56,7 +56,19 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toTopOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+                app:layout_constraintTop_toBottomOf="@+id/toolbarIcon"/>
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/toolbarIcon"
+                app:layout_constraintStart_toStartOf="@+id/toolbarIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icons_24px_back02"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:visibility="visible" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>
